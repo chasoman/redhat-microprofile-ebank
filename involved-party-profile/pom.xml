@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sample.microprofile.e-bank.webservice.invovled-party-profile</groupId>
+  <artifactId>involved-party-profile</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>involved-party-profile</name>
+  <description>This webservice maintains involved party's profile</description>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<version.thorntail>2.4.0.Final</version.thorntail>
+		<version.compiler.plugin>3.1</version.compiler.plugin>
+		<version.war.plugin>2.5</version.war.plugin>
+		<version.microprofile>1.2</version.microprofile>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
+
+  	<dependencyManagement>
+  		<dependencies>
+  		
+  			<dependency>
+  				<groupId>org.eclipse.microprofile</groupId>
+  				<artifactId>microprofile</artifactId>
+  				<version>${version.microprofile}</version>
+  				<type>pom</type>
+  				<scope>provided</scope>
+  			</dependency>
+  			
+  			<dependency>
+  				<groupId>io.thorntail</groupId>
+  				<artifactId>bom-all</artifactId>
+  				<version>${version.thorntail}</version>
+  				<scope>import</scope>
+  				<type>pom</type>
+  			</dependency>
+  			
+  		</dependencies>
+  	</dependencyManagement>
+
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.eclipse.microprofile</groupId>
+			<artifactId>microprofile</artifactId>
+			<type>pom</type>
+		</dependency>		
+		
+		<dependency>
+			<groupId>io.thorntail</groupId>
+			<artifactId>microprofile</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.thorntail</groupId>
+			<artifactId>microprofile-health</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.thorntail</groupId>
+			<artifactId>microprofile-metrics</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.json</groupId>
+			<artifactId>javax.json-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+	
+</dependencies>  
+
+  <build>
+  	
+  	<finalName>${project.artifactId}</finalName>
+  	
+  	<plugins>
+  		
+  		<plugin>
+  			<artifactId>maven-war-plugin</artifactId>
+  			<version>${version.war.plugin}</version>
+  			<configuration>
+  				<failOnMissingWebXml>false</failOnMissingWebXml>
+  			</configuration>
+  		</plugin>
+  		
+		<plugin>
+			<groupId>io.thorntail</groupId>
+			<artifactId>thorntail-maven-plugin</artifactId>
+			<version>${version.thorntail}</version>
+			<executions>
+				<execution>
+					<goals>
+						<goal>package</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+  
+  	</plugins>
+  
+  </build>
+
+</project>
