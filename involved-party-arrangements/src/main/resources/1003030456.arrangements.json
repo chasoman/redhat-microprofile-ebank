@@ -1,0 +1,18 @@
+{
+	"arrangements" : [
+		{ "arrangement" : {
+				"arrangementId" : "9997786653424",
+				"productType" : "Savings",
+				"status" : "Active",
+				"startDate" : "19600101"
+			}
+		},
+		{ "arrangement" : {
+				"arrangementId" : "4765555566667777",
+				"productType" : "Line Of Credit",
+				"status" : "Active",
+				"startDate" : "19600101"
+			}
+		}
+	]
+}
