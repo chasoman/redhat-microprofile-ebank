@@ -1,0 +1,31 @@
+{
+	"involvedPartyId" : "1003030456",
+	"invovledPartyName" : {
+		"prefixTitle" : "Mr.",
+		"firstName" : "John",
+		"middleName" : "Abigail",
+		"lastName" : "Doe"
+	},
+	"gender" : "Male",
+	"dateOfBirth" : "19490101",
+	"contactPoints" : [
+		{"contactPoint" : {
+			"type" : "Postal Address",
+			"usage" : "Primary Residence",
+			"AddressLine1" : "1024 Covenant Hills Drive",
+			"city" : "Dunwoody",
+			"state" : "GA",
+			"zip" : "30808"
+		}},
+		{"contactPoint" : {
+			"type" : "Telephone Number",
+			"usage" : "Primary Residence",
+			"phoneNumber" : "744-555-5555"
+		}},
+		{"contactPoint" : {
+			"type" : "Email Address",
+			"usage" : "Personal",
+			"email" : "john.doe@thespookyhill.com"
+		}}
+	]
+}
